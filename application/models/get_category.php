@@ -31,8 +31,8 @@
 				foreach ($result->result() as $row) {
 					$data[] = $row;
 				}
+				return $data;
 			}
-			return $data;
 		}
 	}
 ?>
