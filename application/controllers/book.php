@@ -18,5 +18,9 @@
 			$this->load->view('book',$data);
 			$this->load->view('footer');
 		}
+		public function select_category() {
+			$data['category'] = $this->get_category->chain_category();
+			$this->load->view('select_category',$data);
+		}
 	}
 ?>

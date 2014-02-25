@@ -1,8 +1,8 @@
 <div class="container">
 	<div class="row">
-		<div class="col-xs-4 col-xs-offset-8">
-			<form class="form-inline">
-				<select name="category" class="form-control" style="">
+		<div class="col-xs-5 col-xs-offset-7">
+			<div class="pull-right">
+				<select name="category" id="category" class="form-control" style="">
 					<option readonly>Select Category</option>
 					<?php 
 						if ($category) {
@@ -12,8 +12,10 @@
 						}
 					?>
 				</select>
-				<input type="text" name="keyword" class="form-control" placeholder="Search">
-			</form>
+				<form class="form-inline">
+					<input type="text" name="keyword" class="form-control" placeholder="Search">
+				</form>
+			</div>
 		</div>
 	</div>
 	<div class="clearfix"></div>
@@ -34,7 +36,7 @@
 						<th>Download</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="list_books">
 					<?php
 						if ($book) {
 							foreach ($book as $data) {
@@ -47,15 +49,9 @@
 												<div class='dropdown'>
 													<a data-toggle='dropdown' class='btn btn-info dropdown-toggle' href='#'>Download Links <span class='caret'></span></a>
 													<ul class='dropdown-menu'>
-														if ($data->file) {
 															<li><a href='$data->file'>Direct Link</a></li>
-														}
-														if ($data->mirror1) {
 															<li><a href='$data->mirror1'>Mirror Link</a></li>
-														}
-														if ($data->mirror2) {
 															<li><a href='$data->mirror2'>Mirror Link</a></li>
-														}
 													</ul>
 												</div>
 											</td>
