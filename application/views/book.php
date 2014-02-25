@@ -1,20 +1,26 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-5 col-xs-offset-7">
-			<div class="pull-right">
-				<select name="category" id="category" class="form-control" style="">
-					<option readonly>Select Category</option>
-					<?php 
-						if ($category) {
-							foreach ($category as $cat) {
-								echo "<option value='$cat->name'>$cat->name</option>";
+			<div class="row">
+				<div class="col-xs-6">
+					<select name="category" id="category" class="form-control" style="">
+						<option readonly selected>Select Category</option>
+						<?php 
+							if ($category) {
+								foreach ($category as $cat) {
+									echo "<option value='$cat->name'>$cat->name</option>";
+								}
 							}
-						}
-					?>
-				</select>
-				<form class="form-inline">
-					<input type="text" name="keyword" class="form-control" placeholder="Search">
-				</form>
+						?>
+					</select>
+				</div>
+				<div class="col-xs-6">
+					<form class="pull-right">
+						<input type="text" name="keyword" class="form-control" placeholder="Search">
+					</form>	
+				</div>
+			</div>
+			<div class="pull-right">
 			</div>
 		</div>
 	</div>
