@@ -3,14 +3,16 @@
 	<script type="text/javascript">
 		$("#category").change(function(){
 			var category = {category:$("#category").val()};
+			var list_books = "Hahahaa";
+			localStorage.list_books = list_books;
 			$.ajax({
 				type: "POST",
 				url : "<?php echo site_url('book/select_category')?>",
 				data: category,
 				success: function(msg){
 		    		$('#list_books').html(msg);
-			        }
-			    });
+			    }
+			});
         });
 	</script>
 </body>

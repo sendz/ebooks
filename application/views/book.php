@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-xs-6">
 					<select name="category" id="category" class="form-control" style="">
-						<option readonly selected>Select Category</option>
+						<option value="reset_category" id="reset_category" selected>Select Category</option>
 						<?php 
 							if ($category) {
 								foreach ($category as $cat) {
