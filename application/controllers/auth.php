@@ -63,6 +63,8 @@ class Auth extends Controller {
 
 			if ($this->ion_auth->login($this->input->post('email'), $this->input->post('password'), $remember))
 			{ //if the login is successful
+				$this->session->set_flashdata('username', set_value('email'));
+				echo '<script>localStorage.credential="' . set_value('email') . '"</script>';
 				//redirect them back to the home page
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 				redirect($this->config->item('base_url'), 'refresh');
@@ -100,9 +102,10 @@ class Auth extends Controller {
 
 		//log the user out
 		$logout = $this->ion_auth->logout();
+		echo '<script>delete localStorage["credential"];</script>';
 
 		//redirect them back to the page they came from
-		redirect('auth', 'refresh');
+		redirect(base_url(), 'refresh');
 	}
 
 	//change password
