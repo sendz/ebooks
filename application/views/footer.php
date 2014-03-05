@@ -1,5 +1,6 @@
 	<script type="text/javascript" src="<?php echo base_url();?>js/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.md5.js"></script>
 	<script type="text/javascript">
 		$("#category").change(function(){
 			var category = {category:$("#category").val()};
@@ -29,6 +30,8 @@
 		});
 		var credential = localStorage.credential;
 		document.getElementById("credential").innerHTML = credential;
+		var md5Credential = $.md5(credential);
+		document.getElementById("gravatar").src = "http://www.gravatar.com/avatar/" + md5Credential;
 	</script>
 </body>
 </html>

@@ -40,10 +40,12 @@
 			}
 			else {
 		?>
-		<li><a data-toggle="dropdown" class="dropdown-toggle" href="#"><span id="credential"></span>
-					<span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu col-xs-6 pull-right" style="width:250px;" aria-labelledby="drop3">
+		<li><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+				<img src="" id="gravatar" class="img-responsive" style="height:25px;float:left;margin:0px 5px;">
+				<span id="credential"></span>
+				<span class="caret"></span>
+			</a>
+				<ul class="dropdown-menu pull-right" style="width:250px;" aria-labelledby="drop3">
                         <li><a href="<?php echo base_url() . index_page();?>/dashboard">Dashboard</a></li>
                         <li>
                         	<a href="<?php echo base_url() . index_page();?>/auth/logout">Log Out</a>
