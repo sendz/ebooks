@@ -10,7 +10,9 @@
 			parent::__construct();
 		}
 		public function books() {
-			$result = $this->db->get('book');
+			$this->db->from('book');
+			$this->db->order_by('date','DESC');
+			$result = $this->db->get();
 			if ($result->num_rows() > 0) {
 				foreach ($result->result() as $row) {
 					$data[] = $row;
