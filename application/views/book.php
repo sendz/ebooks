@@ -1,8 +1,8 @@
 <div class="container">
 	<div class="row">
-		<div class="col-xs-5 col-xs-offset-7">
-			<div class="row">
-				<div class="col-xs-6">
+		<div class="col-md-5 col-md-offset-7">
+			<div class="row" style="margin-bottom:20px;">
+				<div class="col-md-6">
 					<select name="category" id="category" class="form-control" style="">
 						<option value="reset_category" id="reset_category" selected>Select Category</option>
 						<?php 
@@ -14,7 +14,7 @@
 						?>
 					</select>
 				</div>
-				<div class="col-xs-6">
+				<div class="col-md-6">
 					<form class="pull-right">
 						<input type="text" name="keyword" class="form-control" placeholder="Search">
 					</form>	
@@ -26,7 +26,7 @@
 	</div>
 	<div class="clearfix"></div>
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-md-12">
 			<table class="table table-bordered">
 				<colgroup style="width:10%;"></colgroup>
 				<colgroup style="width:10%;"></colgroup>
@@ -53,7 +53,7 @@
 											<td>$data->category</td>
 											<td>
 												<div class='dropdown'>
-													<a data-toggle='dropdown' class='btn btn-info dropdown-toggle' href='#'>Download Links <span class='caret'></span></a>
+													<a data-toggle='dropdown' class='btn btn-xs btn-info dropdown-toggle' href='#'>Download Links <span class='caret'></span></a>
 													<ul class='dropdown-menu'>";
 								if ($data->file) {
 									echo "
