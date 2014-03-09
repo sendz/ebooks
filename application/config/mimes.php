@@ -98,7 +98,13 @@ $mimes = array(	'hqx'	=>	'application/mac-binhex40',
 				'word'	=>	array('application/msword', 'application/octet-stream'),
 				'xl'	=>	'application/excel',
 				'eml'	=>	'message/rfc822',
-				'json' => array('application/json', 'text/json')
+				'json' => array('application/json', 'text/json'),
+				'odt'	=> 'application/vnd.oasis.opendocument.text',
+	            'ods' 	=> 'application/vnd.oasis.opendocument.spreadsheet',
+	            'odp'	=> 'application/vnd.oasis.opendocument.presentation',
+	            'doc'	=> 'application/msword',
+	            'xls'	=> 'application/vnd.ms-excel',
+	            'ppt'	=> 'application/vnd.ms-powerpoint'
 			);
 
 
