@@ -8,7 +8,7 @@
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<?php 
-						echo form_open_multipart("dashboard/do-upload");
+						echo form_open_multipart("dashboard/add_book");
 					?>
 					<div class="modal-content">
 						<div class="modal-header">
@@ -18,9 +18,16 @@
 						<div class="modal-body">
 							<?php
 								echo form_label("eBook Title","title");
+								$y = date('Y');
+								$m = date('m');
+								$d = date('d');
+								$s = "$y-$m-$d";
+								echo form_hidden("date","$s","class='form-control' required") ;
 								echo form_input("title","","id='title' class='form-control' placeholder='Title of eBook' required");
+								echo form_label("Description","description");
+								echo "<textarea name='description' id='description' rows='3' class='form-control' placeholder='eBook Description'></textarea>";
 								echo form_label("Browse File",'file');
-								echo form_upload("file","","id='file' class='form-control' placeholder='Brose File'");
+								echo form_upload("userfile","","id='file' class='form-control' placeholder='Brose File'");
 								echo form_label("Mirror Link 1","mirror1");
 								echo "<input type='url' id='mirror1' name='mirror1' class='form-control' placeholder='Mirror Link 1 (Google Drive, OneDrive, Ubuntu One, box, and any other services)'/>";
 								echo form_label("Mirror Link 2","mirror2");
@@ -46,7 +53,7 @@
 				</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
 		<!-- Books List -->
-			<table class="table table-bordered margin-top-10">
+			<table class="table table-bordered margin-top-10 table-hover">
 				<colgroup style="width:20%;"></colgroup>
 				<colgroup style="width:10%;"></colgroup>
 				<colgroup style="width:30%;"></colgroup>
