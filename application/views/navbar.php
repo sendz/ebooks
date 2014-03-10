@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">eBooks</a>
+			<a class="navbar-brand" href="<?php echo base_url();?>">eBooks</a>
 		</div>
 		<ul class="nav navbar-nav pull-right">
 		<?php
