@@ -19,7 +19,7 @@
 		// Setup drop down menu
 			$('.dropdown-toggle').dropdown();
 			// Fix input element click problem
-			$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+			$('.dropdown-menu input, .dropdown-menu label, .dropdown-toggle ul').click(function(e) {
 				e.stopPropagation();
 			});
 		});
@@ -29,8 +29,9 @@
 			keyboard: 'false'
 		});
 		var credential = localStorage.credential;
-		document.getElementById("credential").innerHTML = credential;
-		var md5Credential = $.md5(credential);
+		//document.getElementById("credential").innerHTML = credential;
+		//document.getElementById("user").value = credential;
+		//var md5Credential = $.md5(credential);
 		document.getElementById("gravatar").src = "http://www.gravatar.com/avatar/" + md5Credential;
 	</script>
 </body>
